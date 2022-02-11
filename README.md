@@ -1,7 +1,3 @@
-# Jides-CMS-Style-Blog-Site
-
-# CMS-Style-Blog-Site
-
 # Title
 ### Jides-CMS-Style-Blog-Site
 ## Table of Contents
