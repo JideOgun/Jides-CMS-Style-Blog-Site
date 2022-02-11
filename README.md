@@ -1,5 +1,4 @@
 # Jides-CMS-Style-Blog-Site
-# Jides-CMS-Style-Blog-Site
 
 # CMS-Style-Blog-Site
 
