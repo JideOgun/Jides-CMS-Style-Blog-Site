@@ -12,22 +12,20 @@ Post.belongsTo(Developer, {
     foreignKey: 'dev_id'
 });
 
-// Developer.hasMany(Comment, {
-//     foreignKey: 'dev_id'
-// });
+Developer.hasMany(Comment, {
+    foreignKey: 'dev_id'
+});
 
+Post.hasMany(Comment, {
+    foreignKey: 'post_id'
+});
 
+Comment.belongsTo(Developer, {
+    foreignKey: 'dev_id'
+});
 
-// Post.hasMany(Comment, {
-//     foreignKey: 'post_id'
-// });
-
-// Comment.belongsTo(Developer, {
-//     foreignKey: 'dev_id'
-// });
-
-// Comment.belongsTo(Post, {
-//     foreignKey: 'post_id'
-// });
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id'
+});
 
 module.exports = { Developer, Post, Comment };

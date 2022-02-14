@@ -27,11 +27,9 @@ Developer.findOne()
 
 router.post('/', (req, res) => {
 Developer.create({
-
-}).then({
 username: req.body.username,
-password: req.body.password,
-email: req.body.password
+email: req.body.email,
+password: req.body.password
 }).then(dbDevData => {
      res.json(dbDevData);
 })
@@ -39,6 +37,30 @@ email: req.body.password
 console.log(err);
 res.status(500).json(err);
 });
+});
+
+
+// Login Post Route 
+router.post('/login', (req, res) => {
+  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  Developer.findOne({
+    where: {
+      email: req.body.email
+    }
+  }).then(dbDevData => {
+    if (!dbDevData) {
+      res.status(400).json({ message: 'No Developer with that email address!' });
+      return;
+    }
+
+    const validPassword = dbDevData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password!' });
+      return;
+    }
+
+    res.json({ Developer: dbDevData, message: 'You are now logged in!' });
+  });
 });
 
 router.put('/:id', (req, res) => {
