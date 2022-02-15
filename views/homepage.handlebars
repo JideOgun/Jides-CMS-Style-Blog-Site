@@ -1,0 +1,18 @@
+<ol class="post_list">
+    {{#each posts as |post|}}
+<li>
+    <article class="post">
+        <div class="title">
+           <span>{{post_title}}</span> 
+        </div>
+        <div class="content">
+            {{post_content}}
+        </div>
+        <div class="comments">
+            This comment was written by {{developer.username}} on {{createdAt}}
+        </div>
+
+    </article>
+</li>
+{{/each}}
+</ol>

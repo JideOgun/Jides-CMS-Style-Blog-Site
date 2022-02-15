@@ -3,12 +3,13 @@ const { Developer, Post, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
 Post.findAll({
+  
     include: [
         {
             model: Comment,
             include: {
                 model: Developer,
-                attributes: ['username']
+                attributes: ['username', 'created_at']
             }
         }
     ]
@@ -26,7 +27,15 @@ router.get('/:id', (req, res) => {
 Post.findOne({
     where: {
       id: req.params.id
-    }
+    },    include: [
+        {
+            model: Comment,
+            include: {
+                model: Developer,
+                attributes: ['username', 'created_at']
+            }
+        }
+    ]
   })
 .then(dbPostData => res.json(dbPostData))
 .catch(err => {

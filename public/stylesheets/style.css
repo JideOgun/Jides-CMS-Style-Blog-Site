@@ -1,0 +1,20 @@
+.title {
+  border: 10pt;  
+  background-color: darkgray;
+}
+
+.content {
+    background-color: aqua;
+    border: 10pt;  
+    border-color: black;
+  }
+
+  .main {
+    border: 10pt;  
+    border-color: black;
+  }
+
+  .comments {
+    border: 10pt;  
+    background-color: cornflowerblue;
+  }
