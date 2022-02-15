@@ -10,7 +10,20 @@ Developer.findAll()
 });
 
 router.get('/:id', (req, res) => {
-Developer.findOne()
+Developer.findOne({
+  attributes: { exclude: ['password']},
+  where: {
+    id: req.params.id
+  },
+  include: [
+    {
+      model: Post
+    },
+    {
+      model: Comment
+    }
+  ]
+})
 .then(dbDevData => {
     if (!dbDevData) {
         res.status(404).json({ message: 'No developer found with this id' });
