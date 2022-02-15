@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { resetWatchers } = require('nodemon/lib/monitor/watch');
 const { Developer, Post, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
@@ -44,6 +45,12 @@ username: req.body.username,
 email: req.body.email,
 password: req.body.password
 }).then(dbDevData => {
+
+  req.session.save(() => {
+    req.session.user_id = dbDevData.id;
+    req.session.username = dbDevData.username;
+    req.session.loggedIn = true;
+  });
      res.json(dbDevData);
 })
 .catch(err => {
@@ -72,8 +79,26 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    res.json({ Developer: dbDevData, message: 'You are now logged in!' });
+    req.session.save(() => {
+      // decalring session variables
+      req.session.user_id = dbDevData.id;
+      req.session.username = dbDevData.username;
+      req.session.loggedIn = true;
+      
+      res.json({ developer: dbDevData, message: 'You are now logged in!' });
+    });
+    
   });
+});
+
+router.post('/logout', (req, res) => {
+ if(req.session.loggedIn) {
+   req.session.destroy(() => {
+     res.status(204).end();
+   });
+ } else {
+   res.status(404).end();
+ }
 });
 
 router.put('/:id', (req, res) => {
