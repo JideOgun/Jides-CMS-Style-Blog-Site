@@ -1,13 +1,4 @@
-<article class="post">
-    <div class="title">
-     {{post.post_title}} 
-    </div>
-    <div class="content">
-        {{post.post_content}}
-    </div>
-
-    <a href="/post/{{post.id}}">{{post.comments.length}}</a>
-</article>
+{{> post-info post}}
 
 {{#if loggedIn}}
 <form class="comment-form">
@@ -21,16 +12,7 @@
 </form>
 {{/if}}
 
-<div class="comments">
-{{#each post.comments}}
-<section class="comment">
-
-<div>
-    {{comment_text}}----This comment was written by --{{developer.username}}-- on {{createdAt}}
-</div>
-</section>
-{{/each}}
-</div>
+{{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

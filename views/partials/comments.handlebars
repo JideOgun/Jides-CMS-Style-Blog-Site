@@ -1,0 +1,10 @@
+<div class="comments">
+{{#each this}}
+<section class="comment">
+
+<div>
+    {{comment_text}}----This comment was written by --{{developer.username}}-- on {{format_date createdAt}}
+</div>
+</section>
+{{/each}}
+</div>
