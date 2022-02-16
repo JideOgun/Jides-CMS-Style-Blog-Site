@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Developer, Post, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
 Post.findAll({
@@ -45,12 +46,12 @@ Post.findOne({
 });
 
 
-router.post('/', (req, res) => {
+router.post('/',  withAuth, (req, res) => {
  // expects {post_title: 'Taskmaster goes public!', post_content: 'content', dev_id: 1}
  Post.create({
     post_title: req.body.post_title,
     post_content: req.body.post_content,
-    dev_id: req.body.dev_id
+    dev_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -59,7 +60,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth,  (req, res) => {
     Post.update(
         {
         post_title: req.body.post_title,
@@ -85,7 +86,7 @@ router.put('/:id', (req, res) => {
 });
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth,  (req, res) => {
     Post.destroy({
         where: {
           id: req.params.id
@@ -103,9 +104,4 @@ router.delete('/:id', (req, res) => {
           res.status(500).json(err);
         });
 });
-
-
-
-
-
 module.exports = router;
