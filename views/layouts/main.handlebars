@@ -15,8 +15,11 @@
         <a href="/">Jides CMS Style Blog</a>
       </h1>
       <nav>
+        {{#if loggedIn}}
         <button id="logout" class="logout-btn">Logout</button> <br>
+        {{else}}
         <a href="/login">Login</a>
+        {{/if}}
       </nav>
      
     </header>
@@ -27,7 +30,9 @@
       Thanks for visiting!
     </footer>
   </div>
+  {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>

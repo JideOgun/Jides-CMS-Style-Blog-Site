@@ -16,9 +16,10 @@ router.get('/:id', (req, res) => {
 
 
 router.post('/', (req, res) => {
-Comment.create({
+    if(req.session) {
+        Comment.create({
     comment_text: req.body.comment_text,
-    dev_id: req.body.dev_id,
+    dev_id: req.session.user_id,
     post_id: req.body.post_id
 })
 .then(dbCommentData => {
@@ -28,6 +29,8 @@ Comment.create({
     console.log(err);
     res.status(500).json(err);
 });
+    }
+
 });
 
 router.put('/:id', (req, res) => {

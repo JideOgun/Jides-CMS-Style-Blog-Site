@@ -9,7 +9,7 @@ Post.findAll({
             model: Comment,
             include: {
                 model: Developer,
-                attributes: ['username', 'created_at']
+                attributes: ['username']
             }
         }
     ]
