@@ -1,0 +1,12 @@
+<article class="post">
+    <div class="title">
+     <a href="{{post.post_title}}" target="_blank">{{post.post_title}}</a>   
+    </div>
+    <div class="content">
+        {{post.post_content}}
+    </div>
+    <div class="comments">
+         This comment was written by {{developer.username}} on {{createdAt}}
+    </div>
+    <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+</article>

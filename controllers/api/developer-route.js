@@ -84,8 +84,8 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbDevData.id;
       req.session.username = dbDevData.username;
       req.session.loggedIn = true;
-      
-      res.json({ developer: dbDevData, message: 'You are now logged in!' });
+
+      res.json({ user: dbDevData, message: 'You are now logged in!' });
     });
     
   });
