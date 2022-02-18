@@ -1,12 +1,38 @@
+.body{
+  background-color: bisque;
+}
+
+/* .main{
+  
+} */
+
 .title {
-  border: 10pt;  
-  background-color: darkgray;
+ margin-top: 10pt;
+ margin-bottom: 10pt;
+ 
+}
+
+.title-text {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  color: white;
+}
+
+#span-text {
+  float: inline-end;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: white;
 }
 
 .content {
-    background-color: aqua;
+    font-size: large;
     border: 10pt;  
-    border-color: black;
+    color: white;
   }
 
   .main {
@@ -16,5 +42,54 @@
 
   .comments {
     border: 10pt;  
-    background-color: cornflowerblue;
+    background-color: rgb(205, 214, 230);
+  }
+
+  #header {
+    background-color: burlywood;
+    border-radius: 5px;
+    padding: 4pt;
+    color: white;
+    font-family: monospace;
+  }
+
+  .header-text {
+    text-decoration: none;
+    color: white;
+  }
+
+  .Homepage-header {
+    background-color: brown;
+    font-family: monospace;
+    justify-content: center;
+    text-align: center;
+    width: max-content;
+    border-radius: 5px;
+    padding: 10pt;
+  }
+.post-list{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+  .post-card{
+  
+    /* display: flex; */
+    /* justify-content: space-between; */
+    background-color: brown;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .card-text {
+    background-color: burlywood;
+    padding: 30pt;
+    border-radius: 5px;
+  }
+
+  .nav-menu{
+    display: flex;
+    justify-content: space-around;
   }

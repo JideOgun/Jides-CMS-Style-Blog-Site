@@ -8,20 +8,21 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
+<body class="body">
   <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Jides CMS Style Blog</a>
-      </h1>
-      <nav>
+    <header id="header">
+       <nav class="nav-menu">
         {{#if loggedIn}}
-        <a herf="/dashboard">dashboard</a>
-        <button id="logout" class="logout-btn">Logout</button> <br>
+        <a class="header-text" href="/dashboard">Dashboard</a>
+        <button id="logout" class="logout-btn">Logout</button> <a class="header-text" href="/">Homepage</a><br>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
       </nav>
+      <h1 class="Homepage-header">
+        <a class="header-text" href="/">Jides CMS Style Blog - Homepage</a>
+      </h1>
+     
      
     </header>
     <main class="main">

@@ -1,9 +1,14 @@
- <article class="post">
-        <div class="title">
-           <span><a href="/post/{{id}}" target="_blank">{{post_title}}</a> </span> 
+ <article class="post-card card">
+        
+        <div class="content card-body">
+            
+        <div class="title card-title">
+           <span  id="span-text"><a class="title-text" href="/post/{{id}}" target="_blank">{{post_title}}</a> Posted by {{developer.username}} on {{format_date createdAt}}</span> 
+        </div >
+        <div class="card-text">
+          {{post_content}}  
         </div>
-        <div class="content">
-            {{post_content}}
+        
         </div>
 
     </article>
