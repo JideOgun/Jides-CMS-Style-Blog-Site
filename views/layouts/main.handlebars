@@ -14,13 +14,14 @@
        <nav class="nav-menu">
         {{#if loggedIn}}
         <a class="header-text" href="/dashboard">Dashboard</a>
-        <button id="logout" class="logout-btn">Logout</button> <a class="header-text" href="/">Homepage</a><br>
+         <a class="header-text" href="/">Homepage</a><br><br>
+         <button id="logout" class="logout-btn">Logout</button>
         {{else}}
-        <a href="/login">Login</a>
+        <a class="link" href="/login">Login</a>
         {{/if}}
       </nav>
       <h1 class="Homepage-header">
-        <a class="header-text" href="/">Jides CMS Style Blog - Homepage</a>
+        <a class="header-text" href="/">JIDE'S BLOG</a>
       </h1>
      
      
@@ -28,7 +29,7 @@
     <main class="main">
       {{{ body }}}
     </main>
-    <footer>
+    <footer class="footer">
       Thanks for visiting!
     </footer>
   </div>

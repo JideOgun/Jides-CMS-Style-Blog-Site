@@ -1,37 +1,26 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
+  <a class="link" href="/dashboard"> &larr; Back to dashboard</a>
+  <h2  id="title-post">
     Edit Post
   </h2>
   <form class="edit-post-form">
     <div>
-        <label for="post-title">Title</label>
-      <input name="post-title" type="text" value="{{post.title}}" />
+        <label for="title-post" id="post-title">Title</label>
+      <input id="post-title" name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      <label for="post-content">Content</label><br>
-      <textarea id="post-content" name="post-content" /> Whats on your on mind ? </textarea>
+      <label for="post-content" id="post-content-text">Content</label><br>
+      <textarea id="post-content" name="post-content" /></textarea>
     </div>
-    <div>
-       by you on {{format_date createdAt}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{post.comments.length}}</a>
-    </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+  <div>
+    <button id="btn" type="submit">Save post</button> 
+    <br>
+    <button id="btn" type="button" class="delete-post-btn">Delete post</button>
+  </div>
+    
+    
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-{{> comments post.comments}}
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>

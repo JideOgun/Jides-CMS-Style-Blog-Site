@@ -9,14 +9,14 @@
 .title {
  margin-top: 10pt;
  margin-bottom: 10pt;
- 
+ font-family: monospace;
 }
 
 .title-text {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   font-size: large;
   color: white;
 }
@@ -24,7 +24,7 @@
 #span-text {
   float: inline-end;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   font-size: small;
   color: white;
 }
@@ -40,11 +40,6 @@
     border-color: black;
   }
 
-  .comments {
-    border: 10pt;  
-    background-color: rgb(205, 214, 230);
-  }
-
   #header {
     background-color: burlywood;
     border-radius: 5px;
@@ -56,9 +51,12 @@
   .header-text {
     text-decoration: none;
     color: white;
+    font-family: Helvetica;
   }
 
   .Homepage-header {
+    margin-left: auto;
+    margin-right: auto;
     background-color: brown;
     font-family: monospace;
     justify-content: center;
@@ -87,9 +85,93 @@
     background-color: burlywood;
     padding: 30pt;
     border-radius: 5px;
+    font-family: monospace;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
   }
 
   .nav-menu{
+    display: inline-block;
+  }
+
+  #logout {
     display: flex;
-    justify-content: space-around;
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: right;
+   
+  }
+
+  #textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+  #post-content {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+  #btn {
+    display: flex;
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: right;
+   
+  }
+
+  #title-post {
+    font-family: monospace;
+    color: black;
+    font-size: large;
+    
+  }
+
+  #post-title {
+    width: 99.5%;
+    border-radius: 5px;
+  }
+
+  #post-content-text {
+    font-family: monospace;
+    color: black;
+    font-size: large;
+  }
+
+  .link {
+    text-decoration: none;
+    font-family: monospace;
+    color: black;
+    font-size: large;
+  }
+  
+  .footer {
+    margin-top: 15pt;
+    background-color: brown;
+    border-radius: 5px;
+    text-align: center;
   }
