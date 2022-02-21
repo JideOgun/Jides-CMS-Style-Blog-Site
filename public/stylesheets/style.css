@@ -168,9 +168,9 @@
   }
   
   .footer {
-    display: flex;
+    /* display: flex; */
     justify-content: space-evenly;
-    margin-top: 15pt;
+    margin-top: 200pt;
     background-color: brown;
     border-radius: 5px;
     text-align: center;
