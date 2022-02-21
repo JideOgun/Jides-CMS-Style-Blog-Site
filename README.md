@@ -75,12 +75,7 @@ Then the user is able to view comments but I am prompted to log in again before 
         None available.
 ---
 ## CREDITS
-   * UT Modules 14
----
-
-## Walkthrough Video
-   * [Walkthrough Video]()
-   
+   * UT Modules 14  
 ---
 ## Questions
 For any questions 
