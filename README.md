@@ -1,6 +1,7 @@
 # Title
 ### Jides-CMS-Style-Blog-Site
 ## Table of Contents
+[Deployed Heroku Link](https://peaceful-stream-28816.herokuapp.com/)
 ---
 1. [DESCRIPTION](#description)
 2. [LICENSE](#licenses)
