@@ -2,6 +2,7 @@
 ### Jides-CMS-Style-Blog-Site
 ![alt blog](https://res.cloudinary.com/dkmsnpghg/image/upload/v1650635568/vpt03vyd7hrhgz2br8dk.jpg)
 ## Table of Contents
+[Deployed Heroku Link](https://peaceful-stream-28816.herokuapp.com/)
 ---
 1. [DESCRIPTION](#description)
 2. [LICENSE](#licenses)
