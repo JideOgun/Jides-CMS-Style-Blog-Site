@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { resetWatchers } = require('nodemon/lib/monitor/watch');
+
 const { Developer, Post, Comment } = require('../../models');
 
 router.get('/', (req, res) => {

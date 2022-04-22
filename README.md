@@ -1,5 +1,6 @@
 # Title
 ### Jides-CMS-Style-Blog-Site
+![alt blog](https://res.cloudinary.com/dkmsnpghg/image/upload/v1650635568/vpt03vyd7hrhgz2br8dk.jpg)
 ## Table of Contents
 ---
 1. [DESCRIPTION](#description)
